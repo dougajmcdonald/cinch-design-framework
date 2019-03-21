@@ -1,6 +1,6 @@
 This repository aims to provide simple re-usable components to address common UI concerns.
 
-Whilst it's based on react and styled-components the aim is not to couple things too tightly, the CSS should be extractable to an external stylesheet and HTML to a rendering method of your choice.
+It's based on next.js/react and styled jsx but the aim is not to couple things too tightly, the CSS should be extractable to an external stylesheet and HTML to a rendering method of your choice.
 
 ## Components
 
