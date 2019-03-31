@@ -3,8 +3,8 @@ import Layout from '../components/core/Layout'
 import BoxNav from '../components/navigation/BoxNav'
 
 const links = [
-  { text: 'Component 1', href: '/page' },
-  { text: 'Component 2', href: '/page2' },
+  { text: 'Home', href: '/index' },
+  { text: 'Component 2', href: '/about' },
   { text: 'Component 3', href: '/page3' },
   { text: 'Component 4', href: '/page4' },
   { text: 'Component 5', href: '/page5' },
