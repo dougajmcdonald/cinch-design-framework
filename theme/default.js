@@ -13,6 +13,7 @@ export default {
     'line-height': '1.4em'
   },
   size: {
-    header: '80px'
+    header: '80px',
+    padding: '20px'
   }
 }

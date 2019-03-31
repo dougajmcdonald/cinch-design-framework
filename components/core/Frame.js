@@ -1,4 +1,5 @@
-import theme from '../theme/default'
+import React from 'react'
+import theme from '../../theme/default'
 
 const Frame = ({ children }) => (
   <section>

@@ -1,17 +1,8 @@
+import React from 'react'
 import Frame from './Frame'
 import Header from './Header'
-import theme from '../theme/default'
-
-const Body = ({ children }) => (
-  <section>
-    {children}
-    <style jsx>
-      {`
-        padding: 40px;
-      `}
-    </style>
-  </section>
-)
+import Body from './Body'
+import theme from '../../theme/default'
 
 const Layout = ({ children }) => (
   <Frame>
