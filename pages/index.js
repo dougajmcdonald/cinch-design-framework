@@ -10,9 +10,15 @@ const makeLinks = number => {
   return links
 }
 
+const links = [
+  { text: 'Box', href: 'box' },
+  { text: 'Button', href: 'button' },
+  { text: 'Alert', href: 'alert' }
+]
+
 const Index = () => (
   <Layout>
-    <BoxNav links={makeLinks(18)} />
+    <BoxNav links={links} />
   </Layout>
 )
 

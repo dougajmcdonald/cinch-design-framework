@@ -8,7 +8,7 @@ const BoxNav = ({ links }) => (
   <section>
     {links.map(link => (
       <Link key={link.href} href={link.href}>
-        <Box text={link.text} />
+        <Box>{link.text}</Box>
       </Link>
     ))}
     <style jsx>

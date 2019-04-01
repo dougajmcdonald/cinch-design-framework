@@ -2,9 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import theme from '../../theme/default'
 
-const Box = ({ text, onClick }) => (
+const Box = ({ children, onClick }) => (
   <div onClick={onClick}>
-    {text}
+    {children}
     <style jsx>
       {`
         display: flex;
@@ -23,8 +23,7 @@ const Box = ({ text, onClick }) => (
 )
 
 Box.propTypes = {
-  onClick: PropTypes.func.isRequired,
-  text: PropTypes.string.isRequired
+  onClick: PropTypes.func
 }
 
 export default Box

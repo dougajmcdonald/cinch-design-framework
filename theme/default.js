@@ -1,6 +1,7 @@
 export default {
   colour: {
     primary: '#fa7268',
+    primaryHover: '#f96055',
     background: '#efefef',
     text: {
       dark: '#222222',
