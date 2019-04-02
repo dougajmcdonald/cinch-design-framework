@@ -14,6 +14,9 @@ const Button = ({ children, onClick }) => (
         font-weight: 700;
         margin: 0.5em 0;
 
+        align-self: center;
+        justify-self: center;
+
         :hover {
           cursor: pointer;
           background-color: ${theme.colour.primaryHover};

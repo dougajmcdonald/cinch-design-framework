@@ -22,14 +22,20 @@ const Alert = ({ children }) => (
         justify-content: center;
 
         .alert {
-          font-size: 2em;
+          padding: 0.5em 1em;
+          font-size: 1.5em;
           position: relative;
           min-width: 25%;
           width: 50%;
           min-height: 100px;
           height: auto;
-          background-color: ${theme.colour.primary};
-          color: ${theme.colour.text.light};
+
+          display: grid;
+          grid-template-rows: 1fr 1fr;
+          grid-template-columns: 1fr;
+
+          background-color: ${theme.colour.background};
+          color: ${theme.colour.text.dark};
         }
       `}
     </style>
