@@ -37,6 +37,14 @@ const Layout = ({ children }) => (
           font-weight: normal;
         }
 
+        h1 {
+          margin: 1em 0em;
+        }
+
+        p {
+          margin: 1em 0em;
+        }
+
         ol,
         ul {
           list-style: none;
