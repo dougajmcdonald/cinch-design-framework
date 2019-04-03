@@ -5,6 +5,8 @@ const Body = ({ children }) => (
     {children}
     <style jsx>
       {`
+        display: grid;
+        grid-template-columns: 1fr 25%;
         padding: 40px;
       `}
     </style>

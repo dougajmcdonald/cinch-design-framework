@@ -3,11 +3,15 @@ import Frame from './Frame'
 import Header from './Header'
 import Body from './Body'
 import theme from '../../theme/default'
+import HtmlOutput from './HtmlOutput'
 
 const Layout = ({ children }) => (
   <Frame>
     <Header title={'Cinch design framework'} />
-    <Body>{children}</Body>
+    <Body>
+      <main>{children}</main>
+      <HtmlOutput />
+    </Body>
     <style jsx global>
       {`
         html {

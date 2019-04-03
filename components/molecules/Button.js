@@ -2,7 +2,7 @@ import React from 'react'
 import theme from '../../theme/default'
 
 const Button = ({ children, onClick }) => (
-  <button onClick={onClick}>
+  <button id="button" onClick={onClick}>
     {children}
     <style jsx>
       {`
