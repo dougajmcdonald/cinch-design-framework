@@ -1,4 +1,5 @@
 import React from 'react'
+import { withRouter } from 'next/router'
 
 class HtmlOutput extends React.Component {
   constructor() {
@@ -6,15 +7,33 @@ class HtmlOutput extends React.Component {
     this.state = { html: '' }
   }
 
-  componentDidMount() {
-    const button = 'button'
-    const el = document.getElementById(button).cloneNode(true)
-    el.removeAttribute('id')
-    el.removeAttribute('class')
-    console.log(el)
+  removeClassAttribute(el) {
+    if (el.removeAttribute) {
+      el.removeAttribute('id')
+      el.removeAttribute('class')
+    }
+
     el.childNodes.forEach(child => {
       child.removeAttribute && child.removeAttribute('class')
+      this.removeClassAttribute(child)
     })
+  }
+
+  componentDidMount() {
+    const { pathname } = this.props.router
+    const pageName = pathname.replace('/', '')
+    console.log(pageName)
+    const maybeEl = document.getElementById(pageName)
+
+    if (!maybeEl) {
+      this.setState({ html: `No component #id matching '${pageName}'` })
+      return
+    }
+
+    const el = maybeEl.cloneNode(true)
+
+    this.removeClassAttribute(el)
+
     this.setState({ html: el.outerHTML })
   }
 
@@ -26,6 +45,8 @@ class HtmlOutput extends React.Component {
           {`
             background-color: white;
             padding: 1em;
+            white-space: pre-wrap;
+            word-break: keep-all;
           `}
         </style>
       </pre>
@@ -33,4 +54,4 @@ class HtmlOutput extends React.Component {
   }
 }
 
-export default HtmlOutput
+export default withRouter(HtmlOutput)

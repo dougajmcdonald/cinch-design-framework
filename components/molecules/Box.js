@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import theme from '../../theme/default'
 
 const Box = ({ children, onClick }) => (
-  <div onClick={onClick}>
+  <div id="box" onClick={onClick}>
     {children}
     <style jsx>
       {`

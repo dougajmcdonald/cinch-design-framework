@@ -7,6 +7,7 @@ const Body = ({ children }) => (
       {`
         display: grid;
         grid-template-columns: 1fr 25%;
+        grid-column-gap: 40px;
         padding: 40px;
       `}
     </style>

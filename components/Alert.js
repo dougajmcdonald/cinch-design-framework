@@ -7,7 +7,7 @@ const Alert = ({ children }) => {
 
   return (
     show && (
-      <div>
+      <div id="alert">
         <aside className="alert">
           {children}
           <Button onClick={() => toggleDisplay(!show)}>Ok</Button>
