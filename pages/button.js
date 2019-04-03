@@ -6,9 +6,8 @@ const Page = () => (
   <Layout>
     <h1>Button</h1>
     <p>The 'Button' is a clickable link</p>
-
     <Button
-      onClick={e => {
+      onClick={() => {
         alert('I clicked the button')
       }}
     >
