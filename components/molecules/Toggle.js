@@ -17,7 +17,7 @@ const style = css`
   }
 
   input:checked + label {
-    background: #9fd6ae;
+    background: ${theme.colour.green};
   }
 
   label {
@@ -57,9 +57,9 @@ const style = css`
 `
 
 const Toggle = () => (
-  <div>
-    <input id="toggle" type="checkbox" />
-    <label htmlFor="toggle" className="toggleLabel" />
+  <div id="toggle">
+    <input id="control" type="checkbox" />
+    <label htmlFor="control" />
     <style jsx>{style}</style>
   </div>
 )
