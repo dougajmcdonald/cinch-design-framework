@@ -1,5 +1,6 @@
 import React from 'react'
 import { withRouter } from 'next/router'
+import CssContext from '../../context/CssContext'
 
 class HtmlOutput extends React.Component {
   constructor() {
@@ -22,7 +23,6 @@ class HtmlOutput extends React.Component {
   componentDidMount() {
     const { pathname } = this.props.router
     const pageName = pathname.replace('/', '')
-    console.log(pageName)
     const maybeEl = document.getElementById(pageName)
 
     if (!maybeEl) {
@@ -39,19 +39,24 @@ class HtmlOutput extends React.Component {
 
   render() {
     return (
-      <pre>
-        {this.state.html}
-        <style jsx>
-          {`
-            background-color: white;
-            padding: 1em;
-            white-space: pre-wrap;
-            word-break: keep-all;
-          `}
-        </style>
-      </pre>
+      <div>
+        <pre>
+          {this.state.html}
+          {/* {this.props.styles} */}
+          <style jsx>
+            {`
+              background-color: white;
+              padding: 1em;
+              white-space: pre-wrap;
+              word-break: break-word;
+            `}
+          </style>
+        </pre>
+      </div>
     )
   }
 }
+
+HtmlOutput.contextType = CssContext
 
 export default withRouter(HtmlOutput)

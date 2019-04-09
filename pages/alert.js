@@ -1,27 +1,49 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Layout from '../components/core/Layout'
 import Alert from '../components/Alert'
 import Button from '../components/molecules/Button'
+import CssContext from '../context/CssContext'
 
-const Page = () => (
-  <Layout>
-    <h1>Alert</h1>
-    <p>The alert is a simple message with a button to dismiss it</p>
-    <p>
-      <em>Note I can't click the button underneath the Modal container</em>
-    </p>
-    <Button
-      onClick={e => {
-        alert('I clicked the button')
-      }}
-    >
-      I'm a button
-    </Button>
-    <Alert>
-      Alert!, this is an alert, this is an alert, this is an alert, this is an
-      alert
-    </Alert>
-  </Layout>
-)
+const Page = () => {
+  const [show, toggleDisplay] = useState(true)
+
+  return (
+    <Layout>
+      <h1>Alert</h1>
+      <p>The alert is a simple message with a button to dismiss it</p>
+      <p>
+        <em>
+          Note I can't click the button underneath the alert Modal container
+          until I 'OK' the alert.
+        </em>
+      </p>
+      <Button
+        onClick={() => {
+          toggleDisplay(!show)
+        }}
+      >
+        Show alert
+      </Button>
+      <CssContext.Consumer>
+        {({ setStyles }) => (
+          <Alert
+            show={show}
+            toggleDisplay={toggleDisplay}
+            setStyles={setStyles}
+          >
+            <h1>Alert!</h1>
+            <p>
+              this is an alert message. It's designed to present information
+              which should be ackowledged. You can put whatever{' '}
+              <code>children</code> you want in here, text, html, other react
+              components etc.
+            </p>
+            <p>It will always come with a button to confirm the alert.</p>
+          </Alert>
+        )}
+      </CssContext.Consumer>
+    </Layout>
+  )
+}
 
 export default Page

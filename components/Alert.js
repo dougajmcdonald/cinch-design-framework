@@ -1,54 +1,64 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Button from './molecules/Button'
 import theme from './../theme/default'
+import css from 'styled-jsx/css'
 
-const Alert = ({ children }) => {
-  const [show, toggleDisplay] = useState(true)
+const styles = css`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
 
-  return (
-    show && (
-      <div id="alert">
-        <aside className="alert">
-          {children}
-          <Button onClick={() => toggleDisplay(!show)}>Ok</Button>
-        </aside>
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-        <style jsx>
-          {`
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            background-color: rgba(0, 0, 0, 0.5);
+  section {
+    padding: 0.5em 1em;
+    font-size: 1.5em;
+    position: relative;
+    min-width: 25%;
+    width: 50%;
+    min-height: 100px;
+    height: auto;
 
-            display: flex;
-            align-items: center;
-            justify-content: center;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
 
-            .alert {
-              padding: 0.5em 1em;
-              font-size: 1.5em;
-              position: relative;
-              min-width: 25%;
-              width: 50%;
-              min-height: 100px;
-              height: auto;
+    border-radius: 3px;
 
-              display: grid;
-              grid-template-rows: 1fr 1fr;
-              grid-template-columns: 1fr;
+    background-color: ${theme.colour.background};
+    color: ${theme.colour.text.dark};
+  }
+`
 
-              border-radius: 3px;
+class Alert extends React.Component {
+  constructor(props) {
+    super(props)
+  }
 
-              background-color: ${theme.colour.background};
-              color: ${theme.colour.text.dark};
-            }
-          `}
-        </style>
-      </div>
+  componentDidMount() {
+    const { setStyles } = this.props
+    setStyles(styles)
+  }
+
+  render() {
+    const { children, show, toggleDisplay } = this.props
+    return (
+      show && (
+        <div id="alert">
+          <section>
+            {children}
+            <Button onClick={() => toggleDisplay(!show)}>Ok</Button>
+          </section>
+          <style jsx>{styles}</style>
+        </div>
+      )
     )
-  )
+  }
 }
 
 export default Alert
