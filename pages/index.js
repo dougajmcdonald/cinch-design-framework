@@ -15,7 +15,9 @@ const links = [
   { text: 'Button', href: 'button' },
   { text: 'Alert', href: 'alert' },
   { text: 'Toggle', href: 'toggle' },
-  { text: 'Dropdown', href: 'dropdown' }
+  { text: 'Dropdown', href: 'dropdown' },
+  { text: 'TextField', href: 'textfield' },
+  { text: 'Typogrpahy', href: 'typography' }
 ]
 
 const Index = () => (

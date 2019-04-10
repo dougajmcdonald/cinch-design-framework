@@ -7,9 +7,11 @@ const style = css`
   border-radius: 3px;
   background-color: ${theme.colour.primary};
   color: ${theme.colour.text.light};
-  padding: 1em 2em;
-  font-weight: 700;
+  padding: ${theme.padding.button};
+  font-weight: 200;
   margin: 0.5em 0;
+  font-size: 1.4em;
+  font-family: 'Open sans', sans-serif;
 
   align-self: center;
   justify-self: center;

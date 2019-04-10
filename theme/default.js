@@ -4,18 +4,24 @@ export default {
     primaryHover: '#f96055',
     green: '#9fd6ae',
     background: '#efefef',
+    border: '#777',
     text: {
       dark: '#222222',
       light: '#fefefe'
     }
   },
   font: {
-    'font-family': 'Open sans, sans-serif;',
+    'font-family': '"Fira sans", "Open sans", sans-serif;',
     'font-weight': '200;',
     'line-height': '1.4em'
   },
+  padding: {
+    normal: '1em',
+    big: '1em',
+    button: '1em 2em',
+    field: '0.5em 1em'
+  },
   size: {
-    header: '80px',
-    padding: '20px'
+    header: '80px'
   }
 }

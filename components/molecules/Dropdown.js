@@ -4,19 +4,20 @@ import css from 'styled-jsx/css'
 
 const style = css`
   min-width: 200px;
-  padding: 1em 2em 1em 1em;
+  padding: ${theme.padding.normal};
   border: 1px solid ${theme.colour.text};
   border-radius: 4px;
   font-weight: bold;
 
-  -webkit-appearance: none;
+  /* -webkit-appearance: none;
   -moz-appearance: none;
-  appearance: none;
-  background: url(http://www.stackoverflow.com/favicon.ico) 96% / 15% no-repeat
-    #eee;
+  appearance: none; */
+  /* background: url(http://www.stackoverflow.com/favicon.ico) 96% / 15% no-repeat
+    #eee; */
 
   option {
     font-weight: normal;
+    line-height: 1.5em;
   }
 `
 

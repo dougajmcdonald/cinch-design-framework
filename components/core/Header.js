@@ -6,20 +6,23 @@ import theme from '../../theme/default'
 const Header = ({ title }) => (
   <div>
     <Link href={'/'}>
-      <h1>{title}</h1>
+      <span>{title}</span>
     </Link>
     <style jsx>{`
       height: ${theme.size.header};
 
       background-color: ${theme.colour.primary};
 
-      h1 {
+      span {
         color: ${theme.colour.text.light};
         margin: 0 0 0 40px;
         line-height: 80px;
+        font-size: 3em;
+        font-family: 'Open sans', sans-serif;
+        font-weight: 300;
       }
 
-      h1:hover {
+      span:hover {
         cursor: pointer;
       }
     `}</style>

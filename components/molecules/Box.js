@@ -11,6 +11,8 @@ const style = css`
   background-color: ${theme.colour.primary};
   color: ${theme.colour.text.light};
 
+  padding: ${theme.padding.big};
+
   :hover {
     cursor: pointer;
   }

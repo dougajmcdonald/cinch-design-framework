@@ -5,6 +5,8 @@ import Body from './Body'
 import theme from '../../theme/default'
 import HtmlOutput from './HtmlOutput'
 import CssContext from '../../context/CssContext'
+// import 'typeface-fira-sans'
+import Head from 'next/head'
 
 class Layout extends React.Component {
   constructor() {
@@ -25,6 +27,16 @@ class Layout extends React.Component {
   render() {
     return (
       <CssContext.Provider value={this.state}>
+        <Head>
+          <link
+            href="https://fonts.googleapis.com/css?family=Fira+Sans:200,400"
+            rel="stylesheet"
+          />
+          <link
+            href="https://fonts.googleapis.com/css?family=Open+Sans:300,400"
+            rel="stylesheet"
+          />
+        </Head>
         <Frame>
           <Header title={'Cinch design framework'} />
           <Body>
@@ -60,14 +72,6 @@ class Layout extends React.Component {
                 font-weight: normal;
               }
 
-              h1 {
-                margin: 1em 0em;
-              }
-
-              p {
-                margin: 1em 0em;
-              }
-
               ol,
               ul {
                 list-style: none;
@@ -76,6 +80,40 @@ class Layout extends React.Component {
               img {
                 max-width: 100%;
                 height: auto;
+              }
+
+              h1 {
+                font-size: 4em;
+                font-weight: 800;
+                line-height: 2em;
+                letter-spacing: 0.1em;
+              }
+
+              h2 {
+                font-size: 3em;
+                font-weight: 600;
+                line-height: 2em;
+                letter-spacing: 0.1em;
+              }
+
+              h3 {
+                font-size: 2.2em;
+                font-weight: bold;
+                line-height: 2em;
+              }
+
+              h4 {
+                font-size: 2em;
+                font-weight: bold;
+                line-height: 2em;
+              }
+
+              p {
+                font-size: 1.4em;
+                font-weight: 200;
+                line-height: 1.4em;
+                margin: 1em 0em;
+                font-family: 'Open sans', sans-serif;
               }
             `}
           </style>

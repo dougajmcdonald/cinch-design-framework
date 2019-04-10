@@ -8,7 +8,9 @@ const BoxNav = ({ links }) => (
   <section>
     {links.map(link => (
       <Link key={link.href} href={link.href}>
-        <Box>{link.text}</Box>
+        <Box>
+          <h1>{link.text}</h1>
+        </Box>
       </Link>
     ))}
     <style jsx>
@@ -21,8 +23,8 @@ const BoxNav = ({ links }) => (
           ${parseInt(Math.sqrt(links.length), 10)},
           1fr
         );
-        grid-row-gap: ${theme.size.padding};
-        grid-column-gap: ${theme.size.padding};
+        grid-row-gap: ${theme.padding.normal};
+        grid-column-gap: ${theme.padding.normal};
       `}
     </style>
   </section>

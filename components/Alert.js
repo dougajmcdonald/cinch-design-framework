@@ -16,7 +16,7 @@ const styles = css`
   justify-content: center;
 
   section {
-    padding: 0.5em 1em;
+    padding: ${theme.padding.field};
     font-size: 1.5em;
     position: relative;
     min-width: 25%;
