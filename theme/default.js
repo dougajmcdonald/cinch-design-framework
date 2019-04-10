@@ -17,7 +17,7 @@ export default {
   },
   padding: {
     normal: '1em',
-    big: '1em',
+    big: '2em',
     button: '1em 2em',
     field: '0.5em 1em'
   },

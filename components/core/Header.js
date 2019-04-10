@@ -2,11 +2,15 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Link from 'next/link'
 import theme from '../../theme/default'
+import logo from '../../img/logo.svg'
 
 const Header = ({ title }) => (
   <div>
     <Link href={'/'}>
-      <span>{title}</span>
+      <span>
+        <img src={logo} />
+        {title}
+      </span>
     </Link>
     <style jsx>{`
       height: ${theme.size.header};
@@ -24,6 +28,12 @@ const Header = ({ title }) => (
 
       span:hover {
         cursor: pointer;
+      }
+
+      img {
+        height: 55px;
+        margin-right: 10px;
+        padding-top: 20px;
       }
     `}</style>
   </div>

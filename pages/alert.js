@@ -3,6 +3,7 @@ import Layout from '../components/core/Layout'
 import Alert from '../components/Alert'
 import Button from '../components/molecules/Button'
 import CssContext from '../context/CssContext'
+import List from '../components/List'
 
 const Page = () => {
   const [show, toggleDisplay] = useState(true)
@@ -11,12 +12,14 @@ const Page = () => {
     <Layout>
       <h1>Alert</h1>
       <p>The alert is a simple message with a button to dismiss it</p>
-      <p>
-        <em>
-          Note I can't click the button underneath the alert Modal container
-          until I 'OK' the alert.
-        </em>
-      </p>
+      <h4>Features</h4>
+      <List
+        items={[
+          'Modal and prevents you clicking the button below',
+          'You can "OK" the alert to dismiss it',
+          'You can click the button to show it again'
+        ]}
+      />
       <Button
         onClick={() => {
           toggleDisplay(!show)
