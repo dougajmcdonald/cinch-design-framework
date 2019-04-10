@@ -15,6 +15,7 @@ const style = css`
 
   :hover {
     cursor: pointer;
+    background-color: ${theme.colour.primaryHover};
   }
 `
 

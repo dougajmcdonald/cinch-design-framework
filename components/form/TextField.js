@@ -8,10 +8,15 @@ const style = css`
     padding: ${theme.padding.field};
     border: 1px solid ${theme.colour.border};
     border-radius: 2px;
+    color: #777;
 
     font-size: 1.5em;
     font-family: 'Open sans', sans-serif;
     font-weight: 200;
+  }
+
+  input:focus {
+    outline-color: ${theme.colour.primary};
   }
 `
 

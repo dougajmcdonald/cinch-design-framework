@@ -3,11 +3,13 @@ import theme from '../../theme/default'
 import css from 'styled-jsx/css'
 
 const style = css`
-  min-width: 200px;
+  min-width: 300px;
   padding: ${theme.padding.normal};
   border: 1px solid ${theme.colour.text};
   border-radius: 4px;
-  font-weight: bold;
+  font-family: 'Open sans', sans-serif;
+  font-weight: 200;
+  font-size: 1.4em;
 
   /* -webkit-appearance: none;
   -moz-appearance: none;
@@ -16,8 +18,6 @@ const style = css`
     #eee; */
 
   option {
-    font-weight: normal;
-    line-height: 1.5em;
   }
 `
 

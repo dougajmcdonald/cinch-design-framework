@@ -17,7 +17,6 @@ const styles = css`
 
   section {
     padding: ${theme.padding.field};
-    font-size: 1.5em;
     position: relative;
     min-width: 25%;
     width: 50%;

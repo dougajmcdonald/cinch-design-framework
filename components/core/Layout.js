@@ -90,8 +90,8 @@ class Layout extends React.Component {
               }
 
               h2 {
-                font-size: 3em;
-                font-weight: 600;
+                font-size: 3.2em;
+                font-weight: 300;
                 line-height: 2em;
                 letter-spacing: 0.1em;
               }
@@ -104,7 +104,7 @@ class Layout extends React.Component {
 
               h4 {
                 font-size: 2em;
-                font-weight: bold;
+                font-weight: 300;
                 line-height: 2em;
               }
 
