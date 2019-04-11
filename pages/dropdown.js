@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../components/core/Layout'
 import Dropdown from '../components/molecules/Dropdown'
-import List from '../components/List'
+import HeadedList from '../components/composed/HeadedList'
 
 const Page = () => (
   <Layout>
@@ -9,8 +9,8 @@ const Page = () => (
     <p>The 'Dropdown' is styled `select` element</p>
     <p />
     <p>Warning: This may have some issues with IE 10/11</p>
-    <h4>Features</h4>
-    <List
+    <HeadedList
+      header={'Features'}
       items={[
         'It will display a list of `items` you pass in as <option> elements',
         'The `options` within it arent really styled',

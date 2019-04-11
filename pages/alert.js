@@ -3,7 +3,7 @@ import Layout from '../components/core/Layout'
 import Alert from '../components/Alert'
 import Button from '../components/molecules/Button'
 import CssContext from '../context/CssContext'
-import List from '../components/List'
+import HeadedList from '../components/composed/HeadedList'
 
 const Page = () => {
   const [show, toggleDisplay] = useState(true)
@@ -12,8 +12,8 @@ const Page = () => {
     <Layout>
       <h1>Alert</h1>
       <p>The alert is a simple message with a button to dismiss it</p>
-      <h4>Features</h4>
-      <List
+      <HeadedList
+        header={'Features'}
         items={[
           'Modal and prevents you clicking the button below',
           'You can "OK" the alert to dismiss it',
