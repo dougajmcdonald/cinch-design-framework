@@ -18,12 +18,13 @@ const links = [
   { text: 'Dropdown', href: 'dropdown' },
   { text: 'TextField', href: 'textfield' },
   { text: 'Typography', href: 'typography' },
-  { text: 'List', href: 'list' }
+  { text: 'List', href: 'list' },
+  { text: 'Card', href: 'card' }
 ]
 
 const Index = () => (
   <Layout>
-    <BoxNav links={links} />
+    <BoxNav links={links.sort((a, b) => a.text.localeCompare(b.text))} />
   </Layout>
 )
 

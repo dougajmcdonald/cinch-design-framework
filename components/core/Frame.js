@@ -12,7 +12,6 @@ const Frame = ({ children }) => (
         display: grid;
         grid-template-rows: ${theme.size.header} auto;
 
-        background: ${theme.colour.background};
         color: ${theme.colour.light};
       `}
     </style>
