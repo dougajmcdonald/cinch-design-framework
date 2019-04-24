@@ -16,14 +16,18 @@ const Page = () => (
     </p>
     <HeadedList
       header={'Features'}
-      items={['You can click on it', 'it has a hover state']}
+      items={[
+        'You can place HTML or any other react components inside it',
+        'it has a themed topbar',
+        'it has a suble dropshadow'
+      ]}
     />
-    <Card header={'Person Profile'}>
+    <Card header={'Populated card'}>
       <h4>Doug McDonald</h4>
       <p>I am the author of this framework, I hope you enjoy it.</p>
       <img src={person} width="100" height="100" />
     </Card>
-    <Card header={'Card Header'}>Content</Card>
+    <Card header={'Basic empty card'}>Content</Card>
   </Layout>
 )
 

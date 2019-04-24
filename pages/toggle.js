@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from '../components/core/Layout'
-import Toggle from '../components/molecules/Toggle'
+import Toggle from '../components/form/Toggle'
 import HeadedList from '../components/composed/HeadedList'
 
 const Page = () => (

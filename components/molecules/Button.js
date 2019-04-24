@@ -16,6 +16,8 @@ const style = css`
   align-self: center;
   justify-self: center;
 
+  transition: background-color 150ms;
+
   :hover {
     cursor: pointer;
     background-color: ${theme.colour.primaryHover};

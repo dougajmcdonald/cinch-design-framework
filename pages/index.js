@@ -19,7 +19,8 @@ const links = [
   { text: 'TextField', href: 'textfield' },
   { text: 'Typography', href: 'typography' },
   { text: 'List', href: 'list' },
-  { text: 'Card', href: 'card' }
+  { text: 'Card', href: 'card' },
+  { text: 'Radio', href: 'radio' }
 ]
 
 const Index = () => (

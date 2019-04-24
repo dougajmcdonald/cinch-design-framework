@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from '../components/core/Layout'
-import Dropdown from '../components/molecules/Dropdown'
+import Dropdown from '../components/form/Dropdown'
 import HeadedList from '../components/composed/HeadedList'
 
 const Page = () => (

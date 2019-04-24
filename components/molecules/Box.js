@@ -13,6 +13,8 @@ const style = css`
 
   padding: ${theme.padding.big};
 
+  transition: background-color 150ms;
+
   :hover {
     cursor: pointer;
     background-color: ${theme.colour.primaryHover};

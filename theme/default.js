@@ -5,6 +5,7 @@ export default {
     green: '#9fd6ae',
     background: '#efefef',
     border: '#777',
+    grey: '#ddd',
     text: {
       dark: '#222222',
       light: '#fefefe'
@@ -22,6 +23,7 @@ export default {
     field: '0.5em 1em'
   },
   size: {
-    header: '80px'
+    header: '80px',
+    list: '40px'
   }
 }

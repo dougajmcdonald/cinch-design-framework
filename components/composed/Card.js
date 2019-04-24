@@ -24,7 +24,7 @@ const style = css`
 `
 
 const Card = ({ header, children }) => (
-  <section>
+  <section id="card">
     <header>
       <span>{header}</span>
     </header>
