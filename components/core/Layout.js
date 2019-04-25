@@ -115,6 +115,12 @@ class Layout extends React.Component {
                 margin: 1em 0em;
                 font-family: 'Open sans', sans-serif;
               }
+
+              blockquote {
+                border-left: 5px solid ${theme.colour.grey};
+                background-color: ${theme.colour.text.light};
+                padding: ${theme.padding.big};
+              }
             `}
           </style>
         </Frame>
