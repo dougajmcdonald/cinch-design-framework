@@ -10,7 +10,7 @@ const Checkbox = ({ items, onClick }) => (
   <section id="checkbox" onClick={onClick}>
 
       {items.map(item => (
-
+        <div></div>
       ))}
 
 

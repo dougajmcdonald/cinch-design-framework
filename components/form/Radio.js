@@ -16,12 +16,18 @@ const style = css`
 
   ul > li {
     display: flex;
+    align-items: center;
     height: ${theme.size.list};
     margin: ${theme.padding.normal};
   }
 
   ul li input[type='radio'] {
-    visibility: hidden;
+    appearance: none;
+  }
+
+  input[type='radio']:focus ~ label {
+    padding: 0.5em 1em 0.5em 60px;
+    border: 1px dashed ${theme.colour.primary};
   }
 
   ul li label {
