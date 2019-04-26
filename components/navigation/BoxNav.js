@@ -9,7 +9,7 @@ const BoxNav = ({ links }) => (
     {links.map(link => (
       <Link key={link.href} href={link.href}>
         <Box>
-          <h2>{link.text}</h2>
+          <h4>{link.text}</h4>
         </Box>
       </Link>
     ))}

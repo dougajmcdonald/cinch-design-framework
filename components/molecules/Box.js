@@ -7,11 +7,13 @@ const style = css`
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 
   background-color: ${theme.colour.primary};
   color: ${theme.colour.text.light};
 
   padding: ${theme.padding.big};
+  margin: ${theme.padding.normal};
 
   transition: background-color 150ms;
 

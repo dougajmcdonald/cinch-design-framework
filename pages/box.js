@@ -16,7 +16,14 @@ const Page = () => (
         'Has default padding, but will adjust to its content'
       ]}
     />
-    <Box>I'm a box!</Box>
+    <Box>
+      <p>I'm a box!</p>
+    </Box>
+    <Box>
+      <h4>Picture box</h4>
+      <p>This is a box with some text and an image.</p>
+      <img src="https://i.ytimg.com/vi/Ir7UmJ_foHs/hqdefault.jpg" />
+    </Box>
   </Layout>
 )
 

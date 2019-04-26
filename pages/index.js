@@ -11,22 +11,39 @@ const makeLinks = number => {
 }
 
 const links = [
-  { text: 'Box', href: 'box' },
-  { text: 'Button', href: 'button' },
-  { text: 'Alert', href: 'alert' },
-  { text: 'Toggle Switch', href: 'toggle' },
-  { text: 'Dropdown', href: 'dropdown' },
-  { text: 'TextField', href: 'textfield' },
-  { text: 'Typography', href: 'typography' },
-  { text: 'List', href: 'list' },
-  { text: 'Card', href: 'card' },
-  { text: 'Radio List', href: 'radio' },
-  { text: 'Checkbox List', href: 'checkbox' }
+  { text: 'Box', href: 'box', type: 'general' },
+  { text: 'Button', href: 'button', type: 'form' },
+  { text: 'Alert', href: 'alert', type: 'composed' },
+  { text: 'Toggle Switch', href: 'toggle', type: 'form' },
+  { text: 'Dropdown', href: 'dropdown', type: 'form' },
+  { text: 'TextField', href: 'textfield', type: 'form' },
+  { text: 'Typography', href: 'typography', type: 'general' },
+  { text: 'Simple List', href: 'list', type: 'general' },
+  { text: 'Card', href: 'card', type: 'composed' },
+  { text: 'Radio List', href: 'radio', type: 'form' },
+  { text: 'Checkbox List', href: 'checkbox', type: 'form' }
 ]
 
 const Index = () => (
   <Layout>
-    <BoxNav links={links.sort((a, b) => a.text.localeCompare(b.text))} />
+    <h1>General</h1>
+    <BoxNav
+      links={links
+        .filter(x => x.type === 'general')
+        .sort((a, b) => a.text.localeCompare(b.text))}
+    />
+    <h1>Form</h1>
+    <BoxNav
+      links={links
+        .filter(x => x.type === 'form')
+        .sort((a, b) => a.text.localeCompare(b.text))}
+    />
+    <h1>Composed</h1>
+    <BoxNav
+      links={links
+        .filter(x => x.type === 'composed')
+        .sort((a, b) => a.text.localeCompare(b.text))}
+    />
   </Layout>
 )
 

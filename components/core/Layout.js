@@ -87,6 +87,7 @@ class Layout extends React.Component {
                 font-weight: 800;
                 line-height: 2em;
                 letter-spacing: 0.1em;
+                margin-top: 1em;
               }
 
               h2 {
