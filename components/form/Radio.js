@@ -1,27 +1,9 @@
 import React from 'react'
-import theme from '../../theme/default'
 import css from 'styled-jsx/css'
+import theme from '../../theme/default'
 
 const style = css`
-  section {
-    height: auto;
-  }
-
-  ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    overflow: auto;
-  }
-
-  ul > li {
-    display: flex;
-    align-items: center;
-    height: ${theme.size.list};
-    margin: ${theme.padding.normal};
-  }
-
-  ul li input[type='radio'] {
+  input[type='radio'] {
     appearance: none;
   }
 
@@ -30,7 +12,7 @@ const style = css`
     border: 1px dashed ${theme.colour.primary};
   }
 
-  ul li label {
+  label {
     font-size: 1.4em;
     font-weight: 300;
     z-index: 9;
@@ -40,11 +22,7 @@ const style = css`
     padding-left: 60px;
   }
 
-  ul li:hover label {
-    color: ${theme.colour.primary};
-  }
-
-  ul li .check {
+  .check {
     border: 5px solid ${theme.colour.grey};
     border-radius: 100%;
     height: 2em;
@@ -54,18 +32,29 @@ const style = css`
     transition: all 250ms linear;
   }
 
-  ul li:hover .check {
-    border: 5px solid ${theme.colour.primaryHover};
-  }
-
-  ul li .check::before {
+  .check::before {
     content: '';
     border-radius: 100%;
-    height: 2em;
     width: 2em;
+    height: 2em;
     margin: auto;
 
     transition: background-color 250ms linear;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    height: ${theme.size.list};
+    margin: ${theme.padding.normal};
+  }
+
+  .container:hover .check {
+    border: 5px solid ${theme.colour.primaryHover};
+  }
+
+  .container:hover label {
+    color: ${theme.colour.primary};
   }
 
   input[type='radio']:checked ~ .check {
@@ -74,7 +63,7 @@ const style = css`
   }
 
   input[type='radio']:checked ~ .check::before {
-    background-color: ${theme.colour.green};
+    background-color: ${theme.colour.primary};
   }
 
   input[type='radio']:checked ~ label {
@@ -82,25 +71,18 @@ const style = css`
   }
 `
 
-const Radio = ({ items, onClick }) => (
-  <section id="radio">
-    <ul>
-      {items.map(item => (
-        <li key={item}>
-          <input
-            type="radio"
-            id={`${item}-option`}
-            name="selector"
-            onClick={() => onClick(item)}
-          />
-          <div className="check" />
-          <label htmlFor={`${item}-option`}>{item}</label>
-        </li>
-      ))}
-    </ul>
-
+const Radio = ({ onClick, item }) => (
+  <div className="container">
+    <input
+      type="radio"
+      id={`${item}-option`}
+      name="selector"
+      onClick={() => onClick(item)}
+    />
+    <div className="check" />
+    <label htmlFor={`${item}-option`}>{item}</label>
     <style jsx>{style}</style>
-  </section>
+  </div>
 )
 
 export default Radio

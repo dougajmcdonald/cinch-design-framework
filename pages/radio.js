@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Layout from '../components/core/Layout'
-import Radio from '../components/form/Radio'
+import Radio from '../components/composed/RadioList'
 import HeadedList from '../components/composed/HeadedList'
 
 const items = ['bananas', 'coke', 'chocolate', 'blueberries', 'salad cream']

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Layout from '../components/core/Layout'
-import Checkbox from '../components/form/Checkbox'
+import HeadedList from '../components/composed/HeadedList'
+import Checkbox from '../components/composed/CheckboxList'
 
 const items = ['bananas', 'coke', 'chocolate', 'blueberries', 'salad cream']
 
@@ -17,6 +18,15 @@ const Page = () => {
       <p>
         <b>{selectedItems.map(i => `${i} `)}</b> are selected
       </p>
+      <HeadedList
+        header={'Features'}
+        items={[
+          'Provide an items list and get a checkbox option per item',
+          'It has an onClick handler',
+          'You can select multiple items at once',
+          'There is a bug where it doesnt remove an item on de-select'
+        ]}
+      />
       <Checkbox
         items={items}
         onClick={item =>
