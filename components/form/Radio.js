@@ -50,7 +50,6 @@ const style = css`
 
   ul li:hover .check {
     border: 5px solid ${theme.colour.primaryHover};
-    background-color: ${theme.colour.primaryHover};
   }
 
   ul li .check::before {
@@ -78,11 +77,16 @@ const style = css`
 `
 
 const Radio = ({ items, onClick }) => (
-  <section id="radio" onClick={onClick}>
+  <section id="radio">
     <ul>
       {items.map(item => (
         <li key={item}>
-          <input type="radio" id={`${item}-option`} name="selector" />
+          <input
+            type="radio"
+            id={`${item}-option`}
+            name="selector"
+            onClick={() => onClick(item)}
+          />
           <div className="check" />
           <label htmlFor={`${item}-option`}>{item}</label>
         </li>

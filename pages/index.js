@@ -20,7 +20,8 @@ const links = [
   { text: 'Typography', href: 'typography' },
   { text: 'List', href: 'list' },
   { text: 'Card', href: 'card' },
-  { text: 'Radio', href: 'radio' }
+  { text: 'Radio', href: 'radio' },
+  { text: 'Checkbox', href: 'checkbox' }
 ]
 
 const Index = () => (
