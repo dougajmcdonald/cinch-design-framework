@@ -3,13 +3,23 @@ import css from 'styled-jsx/css'
 import theme from '../../theme/default'
 
 const style = css`
-  input[type='radio'] {
-    appearance: none;
+  .container {
+    display: flex;
+    align-items: center;
+    height: ${theme.size.list};
+    margin: ${theme.padding.normal};
   }
 
-  input[type='radio']:focus ~ label {
-    padding: 0.5em 1em 0.5em 60px;
-    border: 1px dashed ${theme.colour.primary};
+  .container:hover .check {
+    border: 5px solid ${theme.colour.primaryHover};
+  }
+
+  .container:hover label {
+    color: ${theme.colour.primary};
+  }
+
+  input {
+    appearance: none;
   }
 
   label {
@@ -42,32 +52,22 @@ const style = css`
     transition: background-color 250ms linear;
   }
 
-  .container {
-    display: flex;
-    align-items: center;
-    height: ${theme.size.list};
-    margin: ${theme.padding.normal};
-  }
-
-  .container:hover .check {
-    border: 5px solid ${theme.colour.primaryHover};
-  }
-
-  .container:hover label {
-    color: ${theme.colour.primary};
-  }
-
-  input[type='radio']:checked ~ .check {
+  input:checked ~ .check {
     border: 5px solid ${theme.colour.primary};
     background-color: ${theme.colour.primary};
   }
 
-  input[type='radio']:checked ~ .check::before {
+  input:checked ~ .check::before {
     background-color: ${theme.colour.primary};
   }
 
-  input[type='radio']:checked ~ label {
+  input:checked ~ label {
     color: ${theme.colour.primary};
+  }
+
+  input:focus:not(:checked) ~ label {
+    padding: 0.5em 1em 0.5em 60px;
+    border: 1px dashed ${theme.colour.primary};
   }
 `
 

@@ -46,24 +46,24 @@ const style = css`
     transition: background-color 250ms linear;
   }
 
-  input[type='checkbox'] {
+  input {
     appearance: none;
   }
 
-  input[type='checkbox']:checked ~ .check {
+  input:checked ~ .check {
     border: 5px solid ${theme.colour.primary};
     background-color: ${theme.colour.primary};
   }
 
-  input[type='checkbox']:checked ~ .check::before {
+  input:checked ~ .check::before {
     background-color: ${theme.colour.green};
   }
 
-  input[type='checkbox']:checked ~ label {
+  input:checked ~ label {
     color: ${theme.colour.primary};
   }
 
-  input[type='checkbox']:focus:not(:checked) ~ label {
+  input:focus:not(:checked) ~ label {
     padding: 0.5em 1em 0.5em 60px;
     border: 1px dashed ${theme.colour.primary};
   }

@@ -14,14 +14,14 @@ const links = [
   { text: 'Box', href: 'box' },
   { text: 'Button', href: 'button' },
   { text: 'Alert', href: 'alert' },
-  { text: 'Toggle', href: 'toggle' },
+  { text: 'Toggle Switch', href: 'toggle' },
   { text: 'Dropdown', href: 'dropdown' },
   { text: 'TextField', href: 'textfield' },
   { text: 'Typography', href: 'typography' },
   { text: 'List', href: 'list' },
   { text: 'Card', href: 'card' },
-  { text: 'Radio', href: 'radio' },
-  { text: 'Checkbox', href: 'checkbox' }
+  { text: 'Radio List', href: 'radio' },
+  { text: 'Checkbox List', href: 'checkbox' }
 ]
 
 const Index = () => (
